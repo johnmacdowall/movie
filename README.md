@@ -19,11 +19,15 @@ the heavy lifting with ffmpeg; the ESP32 just shows frames and plays the audio.
 
 | Part | Notes |
 |---|---|
-| ESP-WROOM-32 dev board (38-pin) | no PSRAM needed |
+| ESP-WROOM-32 dev board (30-pin) | no PSRAM needed |
 | 2.0" ST7789V 240×320 SPI display | display only, no touch |
 | LM386 audio amp + parts below | built on perfboard |
 | 8 Ω speaker (e.g. Waveshare 2030 cavity speaker, 2 W) | |
 | 3 push buttons | volume up, volume down, skip/random |
+
+### ESP32 pinout
+
+![ESP32 pinout](pin_outs.png)
 
 ### Display wiring
 
