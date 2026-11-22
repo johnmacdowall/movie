@@ -1,0 +1,17 @@
+[Unit]
+Description=tinyscreen - movie streamer for ESP32 ST7789 display
+After=network-online.target remote-fs.target
+Wants=network-online.target
+
+[Service]
+# Any user that can read the movie folder; Emby's own user usually can.
+User=emby
+Environment=MOVIE_DIR=/mnt/movies
+Environment=PORT=8090
+Environment=FPS=15
+Environment=QUALITY=7
+ExecStart=/usr/bin/python3 /opt/tinyscreen/tinyscreen.py
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
